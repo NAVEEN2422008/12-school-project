@@ -10,8 +10,10 @@ from typing import Dict, List, Any, Optional
 import requests
 import subprocess
 import asyncio
+import aiofiles
+
 def install_required_modules():
-    required_modules = ['tkinter', 'requests', 'asyncio']
+    required_modules = ['tkinter', 'requests', 'asyncio', 'aiofiles']
     for module in required_modules:
         try:
             __import__(module)

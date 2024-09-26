@@ -47,11 +47,9 @@ class FuturisticChatClient:
         threading.Thread(target=self.send_worker, daemon=True).start()
 
     def create_received_files_folder(self):
-        home_dir = Path.home()
-        received_files_folder = home_dir / 'received_files'
+        received_files_folder = Path.cwd() / 'received_files'
         received_files_folder.mkdir(parents=True, exist_ok=True)
         return received_files_folder
-
 
     def setup_gui(self):
         style = ttk.Style()
